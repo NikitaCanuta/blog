@@ -2,9 +2,36 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My blog</title>
+    <title>Tu peso</title>
   </head>
   <body>
-    <h1>My blog</h1>
+    <h1>Tu peso en otra planeta</h1>
+    <p>En la tierra pesas distinto que en marte y en jupiter</p>
+    <script type="text/javascript">
+      var nombre;
+      var gravtierra = 9.8;
+      var gravmarte = 3.7;
+      var gravjupiter = 24.8;
+      var peso;
+      var pesototal;
+      peso = parseInt(prompt("Ingrese su peso"));
+      planeta = prompt("Ingresa 1 si es Marte, 2 si es Jupiter");
+      if(planeta == 1)
+      {
+        pesototal= parseInt(peso*gravmarte/gravtierra);
+        nombre = "Marte";
+      }
+      else if(planeta == 2)
+      {
+        pesototal= parseInt(peso*gravjupiter/gravtierra);
+        nombre = "Jupiter";
+      }
+      else
+      {
+        pesototal=10000;
+        nombre = "Krilin"
+      }
+      document.write("Su peso en "+nombre+" es <strong>"+pesototal+"</strong>");
+    </script>
   </body>
 </html>
